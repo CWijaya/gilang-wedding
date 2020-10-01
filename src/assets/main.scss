@@ -1,0 +1,175 @@
+@import "css/normalize";
+@import "css/grid";
+@import "vars/variables";
+
+@font-face {
+	font-family: "DIN Alternate";
+	src: url("./assets/fonts/DINAlternate-Medium.woff2") format("woff2"), url("./assets/fonts/DINAlternate-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DIN Alternate Bold";
+	src: url("./assets/fonts/DINAlternate-Bold.woff2") format("woff2"), url("./assets/fonts/DINAlternate-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DIN Alternate Light";
+	src: url("./assets/fonts/DINAlternate-Light.woff2") format("woff2"), url("./assets/fonts/DINAlternate-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DIN Condensed Medium";
+	src: url("./assets/fonts/DINCondensed-Bold.woff2") format("woff2"), url("./assets/fonts/DINCondensed-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font-size: 15px;
+	font-family: "DIN Alternate";
+
+	@include media-query-tablet-portrait-up {
+		font-size: 16px;
+	}
+}
+
+#app {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #fff;
+	overflow: hidden;
+	//   padding: 0 4%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "DIN Condensed Medium";
+	color: $primary-color;
+	margin: 0;
+}
+
+h1 {
+	font-size: 60px;
+	line-height: 1;
+	letter-spacing: 4px;
+
+	@include media-query-tablet-portrait-up {
+		line-height: 1.15;
+		font-size: 74px;
+	}
+}
+
+h2 {
+	font-size: 30px;
+	letter-spacing: 2px;
+
+	@include media-query-tablet-portrait-up {
+		font-size: 44px;
+	}
+}
+
+h3 {
+	font-size: 28px;
+	letter-spacing: 2px;
+
+	@include media-query-tablet-portrait-up {
+		font-size: 42px;
+	}
+}
+
+h4 {
+	font-size: 26px;
+	letter-spacing: 1px;
+
+	@include media-query-tablet-portrait-up {
+		font-size: 38px;
+	}
+}
+
+p {
+	margin-top: 0;
+	font-size: 15px;
+
+	@include media-query-tablet-portrait-up {
+		font-size: 19px;
+	}
+
+	@include media-query-desktop-up {
+		font-size: 23px;
+	}
+
+	@include media-query-medium-desktop-up {
+		font-size: 26px;
+	}
+
+	&.bold {
+		font-family: "DIN Alternate Bold";
+	}
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.no-padding-left-desktop {
+	@include media-query-tablet-portrait-up {
+		padding-left: 0;
+	}
+}
+
+.no-padding-right-desktop {
+	@include media-query-tablet-portrait-up {
+		padding-right: 0;
+	}
+}
+
+.position-relative {
+	position: relative;
+}
+
+.row-flex-desktop {
+	@include media-query-tablet-portrait-up {
+		display: flex;
+	}
+}
+
+// .media,
+// .media-body {
+// 	overflow: hidden;
+// 	zoom: 1;
+// }
+
+.media-body,
+.media-left,
+.media-right {
+	display: table-cell;
+	vertical-align: top;
+}
+
+// .media-left,
+// .media > .pull-left {
+// 	padding-right: 15px;
+// }
+
+// .media-object {
+// 	display: block;
+// 	width: 60px;
+// 	margin-top: 8px;
+// }
+
+// .media-body {
+// 	width: 10000px;
+// }
